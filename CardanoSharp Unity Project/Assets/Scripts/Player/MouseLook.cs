@@ -8,6 +8,8 @@ public class MouseLook : MonoBehaviour
 
     [SerializeField] private Transform playerBody;
 
+    [SerializeField] private bool fixedView;
+
     private float xRotation = 0f;
 
     private void Start()
@@ -23,7 +25,12 @@ public class MouseLook : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
-        playerBody.Rotate(Vector3.up * mouseX);
+        if (!fixedView)
+        {
+            transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+            playerBody.Rotate(Vector3.up * mouseX);
+        }
     }
+
+    public void FixView(bool state) { fixedView = state; }
 }
