@@ -15,11 +15,11 @@ D:/Users/Javier/Desktop/Unity Projects/CardanoSharp Unity/CardanoSharp Unity Pro
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55593
+59653
 Successfully changed project path to: D:/Users/Javier/Desktop/Unity Projects/CardanoSharp Unity/CardanoSharp Unity Project
 D:/Users/Javier/Desktop/Unity Projects/CardanoSharp Unity/CardanoSharp Unity Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 54.64 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 58.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.16f1 (049d6eca3c44)
 [Subsystems] Discovering subsystems at path D:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -36,90 +36,90 @@ Initialize mono
 Mono path[0] = 'D:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56932
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56332
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001254 seconds.
+Registered in 0.001423 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 56.44 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 55.39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.159 seconds
+- Completed reload, in  1.115 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1159ms)
+	ReloadAssembly (1116ms)
 		BeginReloadAssembly (68ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (373ms)
-			LoadAssemblies (67ms)
+		EndReloadAssembly (372ms)
+			LoadAssemblies (68ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (125ms)
+			SetupTypeCache (126ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (163ms)
+			SetupLoadedEditorAssemblies (162ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (57ms)
-				BeforeProcessingInitializeOnLoad (13ms)
+				RefreshPlugins (56ms)
+				BeforeProcessingInitializeOnLoad (12ms)
 				ProcessInitializeOnLoadAttributes (67ms)
-				ProcessInitializeOnLoadMethodAttributes (23ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005123 seconds.
+Registered in 0.005568 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.43 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 59.81 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.109 seconds
+- Completed reload, in  1.140 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1110ms)
-		BeginReloadAssembly (150ms)
+	ReloadAssembly (1141ms)
+		BeginReloadAssembly (151ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (907ms)
-			LoadAssemblies (109ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (938ms)
+			LoadAssemblies (112ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (292ms)
+			SetupTypeCache (285ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (374ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (411ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (55ms)
-				BeforeProcessingInitializeOnLoad (76ms)
-				ProcessInitializeOnLoadAttributes (226ms)
-				ProcessInitializeOnLoadMethodAttributes (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (60ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (251ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2937 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.6 MB.
-System memory in use after: 135.8 MB.
+System memory in use before: 135.8 MB.
+System memory in use after: 136.0 MB.
 
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3379.
-Total: 3.787800 ms (FindLiveObjects: 0.259200 ms CreateObjectMapping: 0.076200 ms MarkObjects: 3.372100 ms  DeleteObjects: 0.078800 ms)
+Total: 3.548900 ms (FindLiveObjects: 0.332400 ms CreateObjectMapping: 0.079500 ms MarkObjects: 3.051000 ms  DeleteObjects: 0.084700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -133,680 +133,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Materials
-  artifactKey: Guid(fadb9fcbbd343054dbbf1421c5b65fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials using Guid(fadb9fcbbd343054dbbf1421c5b65fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7d9325e3dd8688692e015ffbd7161bb') in 0.006514 seconds 
-  Import took 0.025433 seconds .
+  path: Assets/Tiles/DAE format/buildings/building_village.dae
+  artifactKey: Guid(2209512447600c6408ef8928f1ba53d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/DAE format/buildings/building_village.dae using Guid(2209512447600c6408ef8928f1ba53d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54dd967319ab996f0fae3acd6a9ebbfa') in 0.299770 seconds 
+  Import took 0.305069 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 306.408671 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_crossing.dae
-  artifactKey: Guid(dc0307e7d3d710f48817836848b194d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_crossing.dae using Guid(dc0307e7d3d710f48817836848b194d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bfaa4ac9c39cc83e9fe62aacea49aa7') in 0.293886 seconds 
-  Import took 0.310910 seconds .
+  Time since last request: 0.000278 seconds.
+  path: Assets/Tiles/DAE format/buildings/building_water.dae
+  artifactKey: Guid(15357e5631119a64aa1d511fff7b956e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/DAE format/buildings/building_water.dae using Guid(15357e5631119a64aa1d511fff7b956e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db68477af3f7fa65e9fc94d6532f25e7') in 0.080928 seconds 
+  Import took 0.099748 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_end.dae
-  artifactKey: Guid(e3efdbcd4083c83408f10c1790052957) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_end.dae using Guid(e3efdbcd4083c83408f10c1790052957) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcc6f7ff78034fa08550d8a6ce9845a0') in 0.042003 seconds 
-  Import took 0.058506 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_crossing.dae
-  artifactKey: Guid(dc0307e7d3d710f48817836848b194d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_crossing.dae using Guid(dc0307e7d3d710f48817836848b194d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bfaa4ac9c39cc83e9fe62aacea49aa7') in 0.038111 seconds 
-  Import took 0.043752 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_intersectionB.dae
-  artifactKey: Guid(a2505747938cd344bb9e0a66137089a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_intersectionB.dae using Guid(a2505747938cd344bb9e0a66137089a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '523ba56c078dc99da1104b99781ce4ab') in 0.042124 seconds 
-  Import took 0.058735 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_intersectionA.dae
-  artifactKey: Guid(480751843ae87514ea9e5bb32ec893ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_intersectionA.dae using Guid(480751843ae87514ea9e5bb32ec893ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfc1d3c95cbb9b232ade406a95bf3c46') in 0.036921 seconds 
-  Import took 0.067037 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/building_market.obj
-  artifactKey: Guid(38189680b0b72154ca76e387b4b99814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/building_market.obj using Guid(38189680b0b72154ca76e387b4b99814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f260c1e379e4fb58614f5299bebc72d4') in 0.140588 seconds 
-  Import took 0.145654 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_intersectionH.dae
-  artifactKey: Guid(b24e9703c5edc5b468c62f17004ea670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_intersectionH.dae using Guid(b24e9703c5edc5b468c62f17004ea670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd20c92c27e0b16ff3b4073881b0a3b26') in 0.038784 seconds 
-  Import took 0.050697 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_intersectionD.dae
-  artifactKey: Guid(5069e9e9ab84a144e8eb74d19bd0ed6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_intersectionD.dae using Guid(5069e9e9ab84a144e8eb74d19bd0ed6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '171566a0e6134d7e40b072d27d342a51') in 0.038124 seconds 
-  Import took 0.047364 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000225 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_intersectionC.dae
-  artifactKey: Guid(9dc19ff129766f142bba0dd4c6bb3634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_intersectionC.dae using Guid(9dc19ff129766f142bba0dd4c6bb3634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd321b8a71002539e09e544f78dc08cc1') in 0.039878 seconds 
-  Import took 0.056356 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_intersectionE.dae
-  artifactKey: Guid(735f4c3464a412a49a7dec3e110f4bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_intersectionE.dae using Guid(735f4c3464a412a49a7dec3e110f4bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b1a0b713ce4c8cca9c32d9ee9febbff') in 0.033465 seconds 
-  Import took 0.049288 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_start.dae
-  artifactKey: Guid(25342c28432484740aed8e2396a97abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_start.dae using Guid(25342c28432484740aed8e2396a97abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a552e60ac1f7ef001536753ef544ec9') in 0.034964 seconds 
-  Import took 0.045722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/unit_wallTower.obj
-  artifactKey: Guid(74555cf43db56cd42b1864d759950cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/unit_wallTower.obj using Guid(74555cf43db56cd42b1864d759950cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b6e0dc216c56e94d3262e0a6dc26a6') in 0.029253 seconds 
-  Import took 0.033514 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Tiles/DAE format/units/unit_wallTower.dae
-  artifactKey: Guid(758ee35d17207a34d9aaaf1489e0498b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/units/unit_wallTower.dae using Guid(758ee35d17207a34d9aaaf1489e0498b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2b5d7eaf61ed4b0db839601ffeab43d') in 0.024055 seconds 
-  Import took 0.042881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Tiles/DAE format/rivers/river_intersectionE.dae
-  artifactKey: Guid(735f4c3464a412a49a7dec3e110f4bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/rivers/river_intersectionE.dae using Guid(735f4c3464a412a49a7dec3e110f4bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b1a0b713ce4c8cca9c32d9ee9febbff') in 0.031566 seconds 
-  Import took 0.036134 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Tiles/DAE format/units/unit_wallTower.dae
-  artifactKey: Guid(758ee35d17207a34d9aaaf1489e0498b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/units/unit_wallTower.dae using Guid(758ee35d17207a34d9aaaf1489e0498b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2b5d7eaf61ed4b0db839601ffeab43d') in 0.023274 seconds 
-  Import took 0.027859 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.146490 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/unit_tower.obj
-  artifactKey: Guid(10887d36775bab8429c2c49a11f62c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/unit_tower.obj using Guid(10887d36775bab8429c2c49a11f62c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52965ae4fef44620219e15a94a099b8d') in 0.063919 seconds 
-  Import took 0.069306 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001195 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/unit_tower.obj
-  artifactKey: Guid(10887d36775bab8429c2c49a11f62c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/unit_tower.obj using Guid(10887d36775bab8429c2c49a11f62c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52965ae4fef44620219e15a94a099b8d') in 0.061098 seconds 
-  Import took 0.065929 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.923367 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/building_house.obj
-  artifactKey: Guid(3c4d8176bf3c65843abc53646743b866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/building_house.obj using Guid(3c4d8176bf3c65843abc53646743b866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27005ec014365d4ba31834006a7688af') in 0.087503 seconds 
-  Import took 0.112941 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Tiles/DAE format/buildings/building_house.dae
-  artifactKey: Guid(86402fed94eb29744a6c4c1239144aa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/buildings/building_house.dae using Guid(86402fed94eb29744a6c4c1239144aa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84ec12575d143ed6450220264572fc2b') in 0.117427 seconds 
-  Import took 0.132448 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Tiles/DAE format/stone.dae
-  artifactKey: Guid(aa8b3ab4e2c8a5f499dc4504ce92499b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/stone.dae using Guid(aa8b3ab4e2c8a5f499dc4504ce92499b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f17b742cfc13a6bc39a34463895f5ad7') in 0.027523 seconds 
-  Import took 0.032048 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/building_house.obj
-  artifactKey: Guid(3c4d8176bf3c65843abc53646743b866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/building_house.obj using Guid(3c4d8176bf3c65843abc53646743b866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27005ec014365d4ba31834006a7688af') in 0.108534 seconds 
-  Import took 0.113283 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000322 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/building_mill.obj
-  artifactKey: Guid(ecf38ca7d6f6c724ab42eb67d3f91051) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/building_mill.obj using Guid(ecf38ca7d6f6c724ab42eb67d3f91051) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f84f5885290a68bb6a8795c8b982deb') in 0.093559 seconds 
-  Import took 0.098638 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Tiles/DAE format/units/unit_houseLarge.dae
-  artifactKey: Guid(42a4db43bf3d5d54b87cbcb48d0f6cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/units/unit_houseLarge.dae using Guid(42a4db43bf3d5d54b87cbcb48d0f6cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a009824cb7b83ea8666f8781cd5d3ce0') in 0.028383 seconds 
-  Import took 0.033306 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000483 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/building_village.obj
-  artifactKey: Guid(1fac2062a3863234393ef616f70c5bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/building_village.obj using Guid(1fac2062a3863234393ef616f70c5bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ff54b63d2fa8ad73345b7a76d7135c6') in 0.115457 seconds 
-  Import took 0.144420 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000243 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/river_crossing.obj
-  artifactKey: Guid(498502c9263c11249895e45a8d0036ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/river_crossing.obj using Guid(498502c9263c11249895e45a8d0036ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90174021f79f8e97e9865a08fcca0ecd') in 0.038617 seconds 
-  Import took 0.052679 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/river_straight.obj
-  artifactKey: Guid(0113ff3bfc07dcf44a2ece907b66accf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/river_straight.obj using Guid(0113ff3bfc07dcf44a2ece907b66accf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b803148c662f32a0801a18782528c43f') in 0.063954 seconds 
-  Import took 0.069085 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
-  artifactKey: Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat using Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66116a117692731fad4fe4ae092b75ad') in 0.109148 seconds 
-  Import took 0.114426 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/Tiles/DAE format/paths/path_end.dae
-  artifactKey: Guid(c0bdca5625b6fe249943f81a1a833e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_end.dae using Guid(c0bdca5625b6fe249943f81a1a833e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36ba43dc34f4f2926fa50a95f467a6a3') in 0.023006 seconds 
-  Import took 0.063621 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Tiles/DAE format/paths/path_intersectionA.dae
-  artifactKey: Guid(61e2d5a9cb97aba4abfacb1638f4cf46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_intersectionA.dae using Guid(61e2d5a9cb97aba4abfacb1638f4cf46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '357fd604bee08ab0afe42bfe59b221f8') in 0.023171 seconds 
-  Import took 0.037971 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000267 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/sand_rocks.obj
-  artifactKey: Guid(9c7531d0933471a4cbdb96f2a69247b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/sand_rocks.obj using Guid(9c7531d0933471a4cbdb96f2a69247b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd68a92eaa0888d9518ce4f5bda68a991') in 0.058489 seconds 
-  Import took 0.064058 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/building_water.obj
-  artifactKey: Guid(3e39106f49762784e8ecc5d0a8651620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/building_water.obj using Guid(3e39106f49762784e8ecc5d0a8651620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06c3914a18fa1d7429d607cc0f88fe21') in 0.113899 seconds 
-  Import took 0.124960 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_intersectionG.obj
-  artifactKey: Guid(d32a395f3faf5d64a9312bac7cc6de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_intersectionG.obj using Guid(d32a395f3faf5d64a9312bac7cc6de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c949f0b313868d90d91c8c9d290415') in 0.033654 seconds 
-  Import took 0.038472 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000267 seconds.
-  path: Assets/Tiles/DAE format/paths/path_intersectionH.dae
-  artifactKey: Guid(4de9ff8f4c43fe543bf4abfd4d872a5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_intersectionH.dae using Guid(4de9ff8f4c43fe543bf4abfd4d872a5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c67e340f722fd916be86f5937ade4ddb') in 0.047029 seconds 
-  Import took 0.051809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_start.obj
-  artifactKey: Guid(70c715b2245933b44890a3fb60bea0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_start.obj using Guid(70c715b2245933b44890a3fb60bea0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00dd3a411643394221f38c9005ae8dbb') in 0.031756 seconds 
-  Import took 0.042432 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000222 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_intersectionF.obj
-  artifactKey: Guid(b2b4136b4d0f3394396bd935adeb24bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_intersectionF.obj using Guid(b2b4136b4d0f3394396bd935adeb24bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11b8dd4c4bad32ba5825068279c85b70') in 0.030441 seconds 
-  Import took 0.048354 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/dirt.obj
-  artifactKey: Guid(0d2ef2348ead7484f8259b9042488de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/dirt.obj using Guid(0d2ef2348ead7484f8259b9042488de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14686a0d7bb527fae7c0231573eac9a') in 0.024544 seconds 
-  Import took 0.047662 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Tiles/DAE format/dirt.dae
-  artifactKey: Guid(9b448051f285eaa4c8c7ffbca4ed0259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/dirt.dae using Guid(9b448051f285eaa4c8c7ffbca4ed0259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72af9d4c965ef61b667d7c1ab7b5574d') in 0.017202 seconds 
-  Import took 0.044328 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_intersectionC.obj
-  artifactKey: Guid(b08696dd71dc8684ca2af7739cab08a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_intersectionC.obj using Guid(b08696dd71dc8684ca2af7739cab08a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad0a90e2d1e337ea0301fd8670102469') in 0.029207 seconds 
-  Import took 0.038604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000318 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_intersectionB.obj
-  artifactKey: Guid(f2084a5cd97733249b1b9039ef81adea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_intersectionB.obj using Guid(f2084a5cd97733249b1b9039ef81adea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4043a32bbcaa625ae6e8d3104c5a4536') in 0.042290 seconds 
-  Import took 0.046722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
-  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaf95e52dd112706ad15e2647fb44ff2') in 0.063222 seconds 
-  Import took 0.068256 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/river_end.obj
-  artifactKey: Guid(74252ebf785f9f94ebf76de1e6e3268c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/river_end.obj using Guid(74252ebf785f9f94ebf76de1e6e3268c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd776a00246147eb4b5e6006c500f5ab9') in 0.056035 seconds 
-  Import took 0.076777 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/river_corner.obj
-  artifactKey: Guid(826f19c46ef9d1b499687bcd217dae3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/river_corner.obj using Guid(826f19c46ef9d1b499687bcd217dae3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c35f09e98ed05e6c3dad881a5e09f5a') in 0.045497 seconds 
-  Import took 0.065533 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
-  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51f8ce122711b6a1c80f06a6fbb64d46') in 0.084722 seconds 
-  Import took 0.097350 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/river_cornerSharp.obj
-  artifactKey: Guid(6fe3667ab761d2e4497f0a72ffcab729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/river_cornerSharp.obj using Guid(6fe3667ab761d2e4497f0a72ffcab729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bce086031e657d43fa1ad4cd327ea947') in 0.050003 seconds 
-  Import took 0.054874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000370 seconds.
-  path: Assets/Tiles/DAE format/paths/path_intersectionD.dae
-  artifactKey: Guid(88e8c5f25c467dd4da75c53a210027ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_intersectionD.dae using Guid(88e8c5f25c467dd4da75c53a210027ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7d2f58ee9588156bdce95bbe30c7de2') in 0.045731 seconds 
-  Import took 0.063801 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Tiles/DAE format/paths/path_intersectionC.dae
-  artifactKey: Guid(b6dfdce79db7d014a9c7245dd3ad514a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_intersectionC.dae using Guid(b6dfdce79db7d014a9c7245dd3ad514a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ece267025ad0ffe4998b26655e1893c') in 0.021296 seconds 
-  Import took 0.025693 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_intersectionH.obj
-  artifactKey: Guid(d1499820c2c58f142878be8a7ac606f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_intersectionH.obj using Guid(d1499820c2c58f142878be8a7ac606f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70df5cc5a4f320068acb9f10695d545f') in 0.040570 seconds 
-  Import took 0.045251 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_cornerSharp.obj
-  artifactKey: Guid(3495cd9f7a504be47914b6a87c9c8da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_cornerSharp.obj using Guid(3495cd9f7a504be47914b6a87c9c8da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b1e1b7df3760434913b04992086af3') in 0.030602 seconds 
-  Import took 0.035078 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_corner.obj
-  artifactKey: Guid(ca1d4b9ba80b1da45a2148208640d4b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_corner.obj using Guid(ca1d4b9ba80b1da45a2148208640d4b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a75c2df122586458c092ba0abff21367') in 0.033379 seconds 
-  Import took 0.038496 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000299 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
-  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00b0fdf0819ec091d7c1f163d75e3498') in 0.035487 seconds 
-  Import took 0.040405 seconds .
+  Time since last request: 0.000310 seconds.
+  path: Assets/Tiles/DAE format/paths/path_intersectionF.dae
+  artifactKey: Guid(512ba5a24d903fd4a920bc330fcabdc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/DAE format/paths/path_intersectionF.dae using Guid(512ba5a24d903fd4a920bc330fcabdc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ede0b5c2a45124371645da4c2d73c02f') in 0.019735 seconds 
+  Import took 0.024286 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000244 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/river_start.obj
-  artifactKey: Guid(aa381a729ff8cea488131763d62d4341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/river_start.obj using Guid(aa381a729ff8cea488131763d62d4341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee32feaad8c1ac6582ba46cc1cebb9d1') in 0.051689 seconds 
-  Import took 0.077286 seconds .
+  path: Assets/Tiles/DAE format/grass.dae
+  artifactKey: Guid(b823bd5a207fa7841b9fb6e148047c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/DAE format/grass.dae using Guid(b823bd5a207fa7841b9fb6e148047c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3291e6737f565268dfef16c3b4a699e2') in 0.019859 seconds 
+  Import took 0.024859 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/unit_tree.obj
-  artifactKey: Guid(d97943ad3712b884ab0b125dd1856a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/unit_tree.obj using Guid(d97943ad3712b884ab0b125dd1856a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1560d7f5b3b6ab4c119c38ebb399d197') in 0.033921 seconds 
-  Import took 0.050351 seconds .
+  Time since last request: 0.000263 seconds.
+  path: Assets/Tiles/DAE format/buildings/building_mine.dae
+  artifactKey: Guid(7e0e33a358cc417498c77d1d997279e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/DAE format/buildings/building_mine.dae using Guid(7e0e33a358cc417498c77d1d997279e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67213e09c167214d32119860ab1577d8') in 0.070195 seconds 
+  Import took 0.075184 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Tiles/DAE format/paths/path_crossing.dae
-  artifactKey: Guid(50cf51329feaac3469f4027a441d3583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_crossing.dae using Guid(50cf51329feaac3469f4027a441d3583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e7468fad931555730f8fff9e57a9b3') in 0.025149 seconds 
-  Import took 0.030008 seconds .
+  Time since last request: 0.000280 seconds.
+  path: Assets/Tiles/DAE format/grass_forest.dae
+  artifactKey: Guid(9b2373cfc45187f44950aea6bfc4de5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/DAE format/grass_forest.dae using Guid(9b2373cfc45187f44950aea6bfc4de5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1410768b91477093752d99bb982664b7') in 0.056989 seconds 
+  Import took 0.064608 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000227 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/dirt_lumber.obj
-  artifactKey: Guid(b101a5f04c55e7d4da859b550c700130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/dirt_lumber.obj using Guid(b101a5f04c55e7d4da859b550c700130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c12920be463f9451d66dbf6678a2ec5') in 0.053786 seconds 
-  Import took 0.066999 seconds .
+  Time since last request: 0.000273 seconds.
+  path: Assets/Tiles/DAE format/dirt_lumber.dae
+  artifactKey: Guid(ec2c91c9df174ea47b2e1be83bcce38d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/DAE format/dirt_lumber.dae using Guid(ec2c91c9df174ea47b2e1be83bcce38d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e3a3698cdfb258da80b56acfa230703') in 0.066560 seconds 
+  Import took 0.078686 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_intersectionA.obj
-  artifactKey: Guid(9a55a2f0ad9b6dd40b68718a242dff36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_intersectionA.obj using Guid(9a55a2f0ad9b6dd40b68718a242dff36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77fa8ca4b64555b93658c0c7ee3fad7a') in 0.037902 seconds 
-  Import took 0.058576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000340 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_intersectionD.obj
-  artifactKey: Guid(bbe0eaf131770714895ec5ca7fb4869a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_intersectionD.obj using Guid(bbe0eaf131770714895ec5ca7fb4869a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2223553c398b8bb0e6ac29fc2e046d') in 0.057576 seconds 
-  Import took 0.066533 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_intersectionE.obj
-  artifactKey: Guid(189b6410ed304534b94253d0af97ce77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_intersectionE.obj using Guid(189b6410ed304534b94253d0af97ce77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '495f1c9bdf1024604d0f5de23858edb5') in 0.039904 seconds 
-  Import took 0.044717 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
-  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '827802d5a7d6be715936557d845e8149') in 0.020177 seconds 
-  Import took 0.024600 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000243 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_straight.obj
-  artifactKey: Guid(d7cae387d97efb045abaeb9d97083b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_straight.obj using Guid(d7cae387d97efb045abaeb9d97083b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4431c09e1c2a54010a3673b7b8fa01b') in 0.031469 seconds 
-  Import took 0.047400 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/path_end.obj
-  artifactKey: Guid(1617de55903ba414eb2cb13426eb6264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/path_end.obj using Guid(1617de55903ba414eb2cb13426eb6264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4736e6e5ca45afc727ea7f3cc719440e') in 0.033732 seconds 
-  Import took 0.037917 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/Tiles/DAE format/paths/path_intersectionE.dae
-  artifactKey: Guid(9b3f13c40547cca4ba81e0e91b503813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_intersectionE.dae using Guid(9b3f13c40547cca4ba81e0e91b503813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '176453454a1670324a5a02ad9f10d872') in 0.019542 seconds 
-  Import took 0.023685 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/sand.obj
-  artifactKey: Guid(b727632241496fc4e9da12420760af6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/sand.obj using Guid(b727632241496fc4e9da12420760af6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '073840892db52cabf5f2c1ca818e5007') in 0.025097 seconds 
-  Import took 0.030086 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000301 seconds.
-  path: Assets/Tiles/DAE format/paths/path_cornerSharp.dae
-  artifactKey: Guid(b0b22e6f1e69fc34a85587c54ea8cc86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_cornerSharp.dae using Guid(b0b22e6f1e69fc34a85587c54ea8cc86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13ad7f2de2751cf388c42b3d67aedfcb') in 0.021109 seconds 
-  Import took 0.025634 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000257 seconds.
-  path: Assets/Tiles/DAE format/units/unit_mill.dae
-  artifactKey: Guid(c535a933bcc6a6e4c8ada0cd2eb2e9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/units/unit_mill.dae using Guid(c535a933bcc6a6e4c8ada0cd2eb2e9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f9e50b5fdb361bc868c569fc2c8768d') in 0.041601 seconds 
-  Import took 0.046010 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000301 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/building_tower.obj
-  artifactKey: Guid(1e83203eaeb96dc4999b10c5b438c968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/building_tower.obj using Guid(1e83203eaeb96dc4999b10c5b438c968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5dde5bea7ca818d1a8c84b6b135d60d') in 0.070750 seconds 
-  Import took 0.081626 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000294 seconds.
-  path: Assets/Tiles/DAE format/paths/path_intersectionG.dae
-  artifactKey: Guid(c790805a0c334294e89bf5346aad1d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/paths/path_intersectionG.dae using Guid(c790805a0c334294e89bf5346aad1d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '067ac3a58d0255cbbcb28aa230894e9b') in 0.021989 seconds 
-  Import took 0.038289 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Tiles/DAE format/buildings/building_farm.dae
-  artifactKey: Guid(48497bddb1be6814eac66d3d94a83d93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/DAE format/buildings/building_farm.dae using Guid(48497bddb1be6814eac66d3d94a83d93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e200e9b04bdd3927270d22208ae3b2') in 0.056525 seconds 
-  Import took 0.073428 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/building_mine.obj
-  artifactKey: Guid(b680d4a53f46ed444bcd14f6c3335b67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/building_mine.obj using Guid(b680d4a53f46ed444bcd14f6c3335b67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70c904eb29a8a706b84b4ccd92299d90') in 0.073751 seconds 
-  Import took 0.078596 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1918.812731 seconds.
-  path: Assets/Materials/Dark.mat
-  artifactKey: Guid(b889242ec687cd943adbf869c6fd8573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Dark.mat using Guid(b889242ec687cd943adbf869c6fd8573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52f8f2854ebf24f6c479143088abfa4e') in 0.012676 seconds 
-  Import took 0.019130 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/Materials/Dark.mat
-  artifactKey: Guid(b889242ec687cd943adbf869c6fd8573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Dark.mat using Guid(b889242ec687cd943adbf869c6fd8573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52f8f2854ebf24f6c479143088abfa4e') in 0.026551 seconds 
-  Import took 0.031808 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.472950 seconds.
-  path: Assets/Materials/Dirt.mat
-  artifactKey: Guid(64c3bea0a14800a49988874dac1ef13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Dirt.mat using Guid(64c3bea0a14800a49988874dac1ef13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1350e57978258a13e5a4265d9130f5a1') in 0.009480 seconds 
-  Import took 0.014773 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004195 seconds.
-  path: Assets/Materials/Dirt.mat
-  artifactKey: Guid(64c3bea0a14800a49988874dac1ef13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Dirt.mat using Guid(64c3bea0a14800a49988874dac1ef13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1350e57978258a13e5a4265d9130f5a1') in 0.009320 seconds 
-  Import took 0.014973 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.295939 seconds.
-  path: Assets/Materials/Folliage.mat
-  artifactKey: Guid(b9c3a6da76eb46b40ba65fbe0f29fd4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Folliage.mat using Guid(b9c3a6da76eb46b40ba65fbe0f29fd4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b860644e9b06d9c535c24f2ad08cb81b') in 0.009845 seconds 
-  Import took 0.015070 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.112343 seconds.
-  path: Assets/Materials/Grass.mat
-  artifactKey: Guid(78e071a3921537d4eabf0e015442a7d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Grass.mat using Guid(78e071a3921537d4eabf0e015442a7d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '898ddf1622d79e10ec849e68913a8131') in 0.017764 seconds 
-  Import took 0.043758 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.494937 seconds.
-  path: Assets/Materials/Roof.mat
-  artifactKey: Guid(59b8805e8c7c7a849a7dbfd24c0b32d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Roof.mat using Guid(59b8805e8c7c7a849a7dbfd24c0b32d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aecfb86457da1ced33893fb8b989a73') in 0.009235 seconds 
-  Import took 0.021061 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.261390 seconds.
-  path: Assets/Materials/Sand.mat
-  artifactKey: Guid(a8f93e085b8f1af4b84f104862b81782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Sand.mat using Guid(a8f93e085b8f1af4b84f104862b81782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91beb640ef134a4bd8ff8b3c82fd58ed') in 0.017098 seconds 
-  Import took 0.022649 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.351262 seconds.
-  path: Assets/Materials/Snow.mat
-  artifactKey: Guid(1fd736f35d55e0b4ba77887067495bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Snow.mat using Guid(1fd736f35d55e0b4ba77887067495bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8e9563ed7df39d48daa9999dbdf3b9c') in 0.008399 seconds 
-  Import took 0.027104 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.073436 seconds.
-  path: Assets/Materials/Stone.mat
-  artifactKey: Guid(4ae07262d0dd22b47a4aa1f8240c0999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Stone.mat using Guid(4ae07262d0dd22b47a4aa1f8240c0999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e8852716ff5de2cfe63c8064cb6940c') in 0.008758 seconds 
-  Import took 0.014037 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.472988 seconds.
-  path: Assets/Materials/StoneDark.mat
-  artifactKey: Guid(e5865b066a3151e4fbe5bf6f69c6422f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/StoneDark.mat using Guid(e5865b066a3151e4fbe5bf6f69c6422f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5981b93a672af074875cf7f9f1ce3e13') in 0.010228 seconds 
-  Import took 0.026250 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.653459 seconds.
-  path: Assets/Materials/Water.mat
-  artifactKey: Guid(a04c5b7e1b044ce419c81c967bdc553f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Water.mat using Guid(a04c5b7e1b044ce419c81c967bdc553f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78efd9368072b3a4b484b91786e42fe2') in 0.019846 seconds 
-  Import took 0.024940 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.817336 seconds.
-  path: Assets/Models/HexagonKit/Models/OBJ format/water.obj
-  artifactKey: Guid(adf485819783cc7419c4a587859d3ec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/HexagonKit/Models/OBJ format/water.obj using Guid(adf485819783cc7419c4a587859d3ec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55311151687a2155c4876fe4d6ac4337') in 0.044458 seconds 
-  Import took 0.049472 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.378474 seconds.
-  path: Assets/Materials/Wood.mat
-  artifactKey: Guid(04795f958e1a7844c9c0bbcabe145d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Wood.mat using Guid(04795f958e1a7844c9c0bbcabe145d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ac70bc63a0331bfb12ae56db5a7e6bf') in 0.023465 seconds 
-  Import took 0.029543 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.170762 seconds.
-  path: Assets/Materials/Wool.mat
-  artifactKey: Guid(456b2cfd8b5b21c409a8b0f376092b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Wool.mat using Guid(456b2cfd8b5b21c409a8b0f376092b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17ea3219868030eb94696c620449f8b5') in 0.010093 seconds 
-  Import took 0.015342 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/Materials/WoolBlack.mat
-  artifactKey: Guid(609b2b5eeb5dc1442833a9a32006f2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/WoolBlack.mat using Guid(609b2b5eeb5dc1442833a9a32006f2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '677e2a7368f18479926d0c459383afe2') in 0.020455 seconds 
-  Import took 0.025181 seconds .
+  Time since last request: 0.000254 seconds.
+  path: Assets/Tiles/DAE format/buildings/building_tower.dae
+  artifactKey: Guid(db97bb12245f9ce428476afac031ec77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/DAE format/buildings/building_tower.dae using Guid(db97bb12245f9ce428476afac031ec77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ddb35fae4b1087389490e357eccf8b8') in 0.091340 seconds 
+  Import took 0.096099 seconds .
 
