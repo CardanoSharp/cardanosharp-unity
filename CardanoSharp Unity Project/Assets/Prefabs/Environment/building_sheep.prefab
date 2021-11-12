@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6126091556477775235, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: 64c3bea0a14800a49988874dac1ef13d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,7 +140,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6126091556477775235, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: 64c3bea0a14800a49988874dac1ef13d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 3509527150983687122}
   - component: {fileID: 2210613498969088189}
   - component: {fileID: 4284163415295348885}
+  - component: {fileID: 1131099995}
   m_Layer: 0
   m_Name: sheep
   m_TagString: Untagged
@@ -221,8 +222,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4660651839558579860, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
-  - {fileID: 5895171501939924088, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: b889242ec687cd943adbf869c6fd8573, type: 2}
+  - {fileID: 2100000, guid: 609b2b5eeb5dc1442833a9a32006f2f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -244,6 +245,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1131099995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3988037923877608163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3919c061412d5347b8dcc4cfdf089e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeToPlay: 8
+  maxTimeToPlay: 20
+  variation: 90
+  minDuration: 0.3
+  maxDuration: 1
 --- !u!1 &4207586098065250944
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,8 +321,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6126091556477775235, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
-  - {fileID: -9117483709511198939, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: 64c3bea0a14800a49988874dac1ef13d, type: 2}
+  - {fileID: 2100000, guid: 78e071a3921537d4eabf0e015442a7d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -426,7 +444,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6126091556477775235, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: 64c3bea0a14800a49988874dac1ef13d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -459,6 +477,7 @@ GameObject:
   - component: {fileID: 1918076767482255825}
   - component: {fileID: 8915681495630700457}
   - component: {fileID: 2197997896534108323}
+  - component: {fileID: 709723368}
   m_Layer: 0
   m_Name: sheep 3
   m_TagString: Untagged
@@ -507,8 +526,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4660651839558579860, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
-  - {fileID: 5895171501939924088, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: b889242ec687cd943adbf869c6fd8573, type: 2}
+  - {fileID: 2100000, guid: 456b2cfd8b5b21c409a8b0f376092b04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -530,6 +549,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &709723368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479393973141859587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3919c061412d5347b8dcc4cfdf089e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeToPlay: 8
+  maxTimeToPlay: 20
+  variation: 90
+  minDuration: 0.3
+  maxDuration: 1
 --- !u!1 &7404326729806711315
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +577,7 @@ GameObject:
   - component: {fileID: 7195265979718348988}
   - component: {fileID: 533781438883548863}
   - component: {fileID: 3616310877145778830}
+  - component: {fileID: 6771098}
   m_Layer: 0
   m_Name: sheep 5
   m_TagString: Untagged
@@ -589,8 +626,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4660651839558579860, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
-  - {fileID: 5895171501939924088, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: b889242ec687cd943adbf869c6fd8573, type: 2}
+  - {fileID: 2100000, guid: 456b2cfd8b5b21c409a8b0f376092b04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -612,6 +649,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6771098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404326729806711315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3919c061412d5347b8dcc4cfdf089e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeToPlay: 8
+  maxTimeToPlay: 20
+  variation: 90
+  minDuration: 0.3
+  maxDuration: 1
 --- !u!1 &7757299526219786110
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +677,7 @@ GameObject:
   - component: {fileID: 1934371570447916620}
   - component: {fileID: 8615055989437855951}
   - component: {fileID: 8657052601102971734}
+  - component: {fileID: 388767980}
   m_Layer: 0
   m_Name: sheep 4
   m_TagString: Untagged
@@ -671,8 +726,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4660651839558579860, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
-  - {fileID: 5895171501939924088, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: b889242ec687cd943adbf869c6fd8573, type: 2}
+  - {fileID: 2100000, guid: 456b2cfd8b5b21c409a8b0f376092b04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -694,6 +749,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &388767980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7757299526219786110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3919c061412d5347b8dcc4cfdf089e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeToPlay: 8
+  maxTimeToPlay: 20
+  variation: 90
+  minDuration: 0.3
+  maxDuration: 1
 --- !u!1 &8214797467622139047
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +825,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6126091556477775235, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: 64c3bea0a14800a49988874dac1ef13d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -786,6 +858,7 @@ GameObject:
   - component: {fileID: 1526271336203099448}
   - component: {fileID: 5949974413422360356}
   - component: {fileID: 3059677411944947273}
+  - component: {fileID: 1605248705}
   m_Layer: 0
   m_Name: sheep 1
   m_TagString: Untagged
@@ -834,8 +907,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4660651839558579860, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
-  - {fileID: 5895171501939924088, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: b889242ec687cd943adbf869c6fd8573, type: 2}
+  - {fileID: 2100000, guid: 456b2cfd8b5b21c409a8b0f376092b04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -857,6 +930,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1605248705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898166083675879671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3919c061412d5347b8dcc4cfdf089e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeToPlay: 8
+  maxTimeToPlay: 20
+  variation: 90
+  minDuration: 0.3
+  maxDuration: 1
 --- !u!1 &9107334474098535300
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +958,7 @@ GameObject:
   - component: {fileID: 7261927592905544312}
   - component: {fileID: 8413736884113580620}
   - component: {fileID: 530804831751788097}
+  - component: {fileID: 1858994643}
   m_Layer: 0
   m_Name: sheep 2
   m_TagString: Untagged
@@ -916,8 +1007,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4660651839558579860, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
-  - {fileID: 5895171501939924088, guid: f1b0b6c20c1dff0499eac8babe38f593, type: 3}
+  - {fileID: 2100000, guid: b889242ec687cd943adbf869c6fd8573, type: 2}
+  - {fileID: 2100000, guid: 456b2cfd8b5b21c409a8b0f376092b04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -939,3 +1030,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1858994643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9107334474098535300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3919c061412d5347b8dcc4cfdf089e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeToPlay: 8
+  maxTimeToPlay: 20
+  variation: 90
+  minDuration: 0.3
+  maxDuration: 1

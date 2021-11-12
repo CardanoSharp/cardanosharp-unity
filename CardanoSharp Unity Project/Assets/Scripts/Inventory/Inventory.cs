@@ -10,7 +10,7 @@ public class Inventory : Singleton<Inventory>
 
     private InventoryUI inventoryUI;
 
-    private void Start()
+    private void Awake()
     {
         inventoryUI = GetComponent<InventoryUI>();
     }

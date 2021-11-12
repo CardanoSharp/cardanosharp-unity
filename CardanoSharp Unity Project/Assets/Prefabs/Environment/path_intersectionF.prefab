@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5453407421225511496}
   - component: {fileID: 7803210305914330754}
   - component: {fileID: 8902217677373850117}
+  - component: {fileID: 262306708}
   m_Layer: 6
   m_Name: path_intersectionF
   m_TagString: Untagged
@@ -60,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6126091556477775235, guid: 512ba5a24d903fd4a920bc330fcabdc7, type: 3}
-  - {fileID: -8067726398312463513, guid: 512ba5a24d903fd4a920bc330fcabdc7, type: 3}
+  - {fileID: 2100000, guid: 64c3bea0a14800a49988874dac1ef13d, type: 2}
+  - {fileID: 2100000, guid: 04795f958e1a7844c9c0bbcabe145d58, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &8902217677373850117
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595803914473799511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2973156557151407636, guid: 512ba5a24d903fd4a920bc330fcabdc7, type: 3}
+--- !u!64 &262306708
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
