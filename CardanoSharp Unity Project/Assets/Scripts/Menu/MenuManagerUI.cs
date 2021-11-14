@@ -8,7 +8,8 @@ using Utils;
 
 public class MenuManagerUI : MonoBehaviour
 {
-    [SerializeField] private TMP_Text mnemonicText;
+    [SerializeField] private GameObject mnemonicWords;
+    //[SerializeField] private TMP_Text mnemonicText;
     [SerializeField] private TMP_Text addressText;
     [SerializeField] private Button playButton;
 
@@ -38,7 +39,7 @@ public class MenuManagerUI : MonoBehaviour
     {
         playButton.interactable = false;
 
-        mnemonicText.text = "";
+        //mnemonicText.text = "";
         addressText.text = "";
     }
 
@@ -74,7 +75,19 @@ public class MenuManagerUI : MonoBehaviour
     public void EnablePlayButton() { playButton.interactable = true; }
     public void StartTimer() { _cooldownTimer.Start(); }
 
-    void SetMnemonicText(string s) { mnemonicText.text = s; }
+    void SetMnemonicText(string s) 
+    {
+        int index = 0;
+        string[] array = s.Split(' ');
+
+        foreach(string word in array)
+        {
+            mnemonicWords.transform.GetChild(index).GetComponent<TMP_Text>().text = word;
+            index++;
+        }
+        //mnemonicText.text = s; 
+    }
+
     void SetAddressText(string s) { addressText.text = s; }
 
 }
