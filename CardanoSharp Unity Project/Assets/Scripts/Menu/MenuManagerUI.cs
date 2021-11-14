@@ -1,21 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Utils;
 
 public class MenuManagerUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text mnemonicText;
     [SerializeField] private TMP_Text addressText;
-
     [SerializeField] private Button playButton;
 
     private MenuManager menuManager;
+    private CooldownTimer _cooldownTimer;
 
     private void Awake()
     {
         menuManager = GetComponent<MenuManager>();
+        _cooldownTimer = new CooldownTimer(3); // check every 3 seconds
+
+        // Register handler that will trigger when timer is complete
+        _cooldownTimer.TimerCompleteEvent += OnTimerComplete;
+    }
+
+    private void Update () 
+    {
+        // Update cooldown timer with Time.deltaTime 
+        _cooldownTimer.Update(Time.deltaTime);
+        if (_cooldownTimer.IsActive)
+        {
+            // update the ui or something
+        }
     }
 
     private void Start()
@@ -28,26 +44,37 @@ public class MenuManagerUI : MonoBehaviour
 
     public void OnGenerateButtonPressed()
     {
-        menuManager.GenerateMnemonic();
+        var mnemonic = menuManager.GenerateMnemonic();
+        SetMnemonicText(mnemonic);
 
-        //Change to correct strings
-        SetMnemonicText("abandon ability able about above absent " +
-            "absorb abstract absurd abuse access accident " +
-            "account accuse achieve acid acoustic acquire " +
-            "across act action actor actress actual");
-
-        SetAddressText("addr1q80s6ggmlgzz3lzs6p6t57qz74llxwqrgcga5djk7ecfusg5e4ll25jy4zgje2tuuxzn0xjuuuc7qz0f3wqp09sdyjesw7llzf");
-
-        //EnablePlayButton();
+        var address = menuManager.GetPaymentAddress(mnemonic);
+        SetAddressText(address);
+    }
+    
+    public void OnCopyButtonPressed() 
+    {     
+        menuManager.CopyAddress(addressText.text); 
+        _cooldownTimer.Start();
+        Debug.Log("Address copied! Waiting for funds to arrive...");
     }
 
-    public void OnCopyButtonPressed()
+    private void OnTimerComplete()
     {
-        menuManager.CopyAddress(addressText.text);
+        if(menuManager.HasFunds(addressText.text))
+        {
+            Debug.Log("Address funded! Enabling Play button.");
+            EnablePlayButton();
+        } 
+        else
+        {
+            StartTimer();
+        }
     }
 
     public void EnablePlayButton() { playButton.interactable = true; }
+    public void StartTimer() { _cooldownTimer.Start(); }
 
     void SetMnemonicText(string s) { mnemonicText.text = s; }
     void SetAddressText(string s) { addressText.text = s; }
+
 }
