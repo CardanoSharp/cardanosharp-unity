@@ -16,15 +16,24 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 velocity;
 
-    [SerializeField]private bool isGrounded;
+    private bool isGrounded;
+
+    private bool canMove;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
     }
 
+    private void Start()
+    {
+        canMove = true;
+    }
+
     private void Update()
     {
+        if (!canMove) { return; }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0) { velocity.y = -2f; }
@@ -42,4 +51,6 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public void CanMove(bool state) { canMove = state; }
 }
