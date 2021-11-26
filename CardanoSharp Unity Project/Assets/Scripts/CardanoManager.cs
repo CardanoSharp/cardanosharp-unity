@@ -13,12 +13,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using CardanoSharp.Wallet.Models.Derivations;
+using System.Text.Json;
+using CardanoSharp.Wallet.Models.Transactions;
+using CardanoSharp.Wallet.TransactionBuilding;
+using CardanoSharp.Wallet.Utilities;
+using CardanoSharp.Wallet.Models.Transactions.Scripts;
 
 public class CardanoManager : MonoBehaviour
 {
     private readonly MnemonicService _mnemonicService;
     private readonly AddressService _addressService;
-
+    private readonly DataManager _dataManager;
     private readonly ICardanoService _cardanoService;
 
     public CardanoManager()
@@ -29,7 +35,9 @@ public class CardanoManager : MonoBehaviour
             .GetRequiredService<ICardanoService>();        
 
         _mnemonicService = new MnemonicService();  
-        _addressService = new AddressService();  
+        _addressService = new AddressService();
+
+        _dataManager = GetComponent<DataManager>();
     }
 
     // Start is called before the first frame update
@@ -38,32 +46,10 @@ public class CardanoManager : MonoBehaviour
 
     }
 
+    #region Wallet Creation
     public Mnemonic GenerateMnemonic(int size = 24, WordLists wordLists = WordLists.English)
     {
         return _mnemonicService.Generate(size, wordLists);
-    }
-
-    public Address GetPaymentAddress(string words)
-    {
-        Mnemonic mnemonic = _mnemonicService.Restore(words);
-        
-        // Fluent derivation API
-        var account = mnemonic
-            .GetMasterNode()      // IMasterNodeDerivation
-            .Derive(PurposeType.Shelley)    // IPurposeNodeDerivation
-            .Derive(CoinType.Ada)           // ICoinNodeDerivation
-            .Derive(0);                     // IAccountNodeDerivation
-        
-        var payment = account.Derive(RoleType.ExternalChain).Derive(0);
-        var staking = account.Derive(RoleType.Staking).Derive(0);
-
-        Address baseAddr = _addressService.GetAddress(
-            payment.PublicKey,
-            staking.PublicKey,
-            NetworkType.Testnet, 
-            AddressType.Base);
-
-        return baseAddr;
     }
 
     public Mnemonic RestoreMnemonic(string words)
@@ -71,6 +57,83 @@ public class CardanoManager : MonoBehaviour
         return _mnemonicService.Restore(words);
     }
 
+    public IAccountNodeDerivation GetAccountNode(string words)
+    {
+        Mnemonic mnemonic = _mnemonicService.Restore(words);
+
+        // Fluent derivation API
+        return mnemonic
+            .GetMasterNode()                // IMasterNodeDerivation
+            .Derive(PurposeType.Shelley)    // IPurposeNodeDerivation
+            .Derive(CoinType.Ada)           // ICoinNodeDerivation
+            .Derive(0);                     // IAccountNodeDerivation
+    }
+
+    public KeyPair GenerateKeyPair()
+    {
+        return KeyPair.GenerateKeyPair();
+    }
+    #endregion
+
+    #region Encryption
+    public string EncryptKeys(PrivateKey accountPrivateKey, PublicKey accountPublicKey)
+    {
+        return JsonSerializer.Serialize((accountPrivateKey.Encrypt("spending_password"), accountPublicKey));
+    }
+
+    public (PrivateKey, PublicKey) DecryptKeys(string accountNode)
+    {
+        var load = JsonSerializer.Deserialize<(PrivateKey, PublicKey)>(accountNode);
+        return (load.Item1.Decrypt("spending_password"), load.Item2);
+    }
+    #endregion
+
+    #region Addresses
+    public Address GetPaymentAddress(string words)
+    {
+        Mnemonic mnemonic = _mnemonicService.Restore(words);
+
+        // Fluent derivation API
+        var account = mnemonic
+            .GetMasterNode()                // IMasterNodeDerivation
+            .Derive(PurposeType.Shelley)    // IPurposeNodeDerivation
+            .Derive(CoinType.Ada)           // ICoinNodeDerivation
+            .Derive(0);                     // IAccountNodeDerivation
+
+        var payment = account.Derive(RoleType.ExternalChain).Derive(0);
+        var staking = account.Derive(RoleType.Staking).Derive(0);
+
+        Address baseAddr = _addressService.GetAddress(
+            payment.PublicKey,
+            staking.PublicKey,
+            NetworkType.Testnet,
+            AddressType.Base);
+
+        return baseAddr;
+    }
+    #endregion
+
+    #region Minting
+    public void CreateNativeScript(string name, List<PublicKey> publicKeys, uint? after = null, uint? before = null)
+    {
+        var scriptBuilder = ScriptAllBuilder.Create;
+        foreach (var pubKey in publicKeys)
+        {
+            var policyKeyHash = HashUtility.Blake2b244(pubKey.Key);
+            scriptBuilder.SetScript(NativeScriptBuilder.Create.SetKeyHash(policyKeyHash));
+        }
+        var nativeScript = scriptBuilder.Build();
+        var policyId = nativeScript.GetPolicyId();
+
+        _dataManager.SaveData($"PolicyId:{name}", JsonSerializer.Serialize(policyId));
+    }
+    #endregion
+
+    #region Transactions
+
+    #endregion
+
+    #region Blockfrost
     public async Task<long> GetFundsAsync(string address)
     {
         try 
@@ -84,4 +147,7 @@ public class CardanoManager : MonoBehaviour
             return 0;
         }
     }
+
+
+    #endregion
 }
