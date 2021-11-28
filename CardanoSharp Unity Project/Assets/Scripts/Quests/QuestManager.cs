@@ -25,12 +25,19 @@ public class QuestManager : Singleton<QuestManager>
     public void SetCurrentQuestInfo()
     {
         questText.text = quests[currentQuestIndex].questInfo;
+
+        if(quests[currentQuestIndex].OnStart != null)
+            quests[currentQuestIndex].OnStart.Raise();
+
         NewQuestAnimation();
     }
 
     [ContextMenu("Complete Quest")]
     public void CompleteCurrentQuest()
     {
+        if(quests[currentQuestIndex].OnComplete != null)
+            quests[currentQuestIndex].OnComplete.Raise();
+
         if (currentQuestIndex < quests.Count - 1)
         {
             currentQuestIndex++;

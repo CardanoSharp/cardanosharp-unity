@@ -22,9 +22,10 @@ using CardanoSharp.Wallet.Models.Transactions.Scripts;
 
 public class CardanoManager : MonoBehaviour
 {
+    private DataManager _dataManager;
+
     private readonly MnemonicService _mnemonicService;
     private readonly AddressService _addressService;
-    private readonly DataManager _dataManager;
     private readonly ICardanoService _cardanoService;
 
     public CardanoManager()
@@ -36,7 +37,10 @@ public class CardanoManager : MonoBehaviour
 
         _mnemonicService = new MnemonicService();  
         _addressService = new AddressService();
+    }
 
+    private void Awake()
+    {
         _dataManager = GetComponent<DataManager>();
     }
 
