@@ -19,6 +19,7 @@ using CardanoSharp.Wallet.Models.Transactions;
 using CardanoSharp.Wallet.TransactionBuilding;
 using CardanoSharp.Wallet.Utilities;
 using CardanoSharp.Wallet.Models.Transactions.Scripts;
+using System;
 
 public class CardanoManager : MonoBehaviour
 {
@@ -51,6 +52,39 @@ public class CardanoManager : MonoBehaviour
     }
 
     #region Wallet Creation
+    public void CreateWallet(string walletName)
+    {
+        walletName = $"Wallet:{walletName}";
+
+        if (_dataManager.Exists(walletName))
+            _dataManager.DeleteData(walletName);
+
+        var mnemonic = new MnemonicService().Generate(24);
+
+        var accountNode = mnemonic.GetMasterNode()
+            .Derive(PurposeType.Shelley)
+            .Derive(CoinType.Ada)
+            .Derive(0);
+
+        var paymentIx = accountNode
+            .Derive(RoleType.ExternalChain)
+            .Derive(0);
+        paymentIx.SetPublicKey();
+
+        var stakingIx = accountNode
+            .Derive(RoleType.Staking)
+            .Derive(0);
+        paymentIx.SetPublicKey();
+
+        var baseAddr = new AddressService()
+            .GetAddress(paymentIx.PublicKey,
+                stakingIx.PublicKey,
+                NetworkType.Testnet,
+                AddressType.Base);
+
+        _dataManager.SaveData(walletName, baseAddr.ToString());
+    }
+
     public Mnemonic GenerateMnemonic(int size = 24, WordLists wordLists = WordLists.English)
     {
         return _mnemonicService.Generate(size, wordLists);
@@ -134,7 +168,10 @@ public class CardanoManager : MonoBehaviour
     #endregion
 
     #region Transactions
-
+    public async void MintNFT(string nft)
+    {
+        throw new NotImplementedException();
+    }
     #endregion
 
     #region Blockfrost

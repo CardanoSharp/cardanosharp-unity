@@ -9,11 +9,16 @@ public class QuestEvents : MonoBehaviour
 
     public void StartQuest1()
     {
-        Debug.Log("Quest 1 Started!");
+        CardanoManager.CreateWallet("Player");
     }
 
     public void CompleteQuest1()
     {
         Debug.Log("Quest 1 Completed!");
+    }
+
+    public void CompleteQuest3()
+    {
+        CardanoManager.MintNFT("Sword");
     }
 }
