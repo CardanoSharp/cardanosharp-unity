@@ -9,7 +9,7 @@ public class QuestEvents : MonoBehaviour
 
     public void StartQuest1()
     {
-        CardanoManager.CreateWallet("Player");
+        CardanoManager.CreatePlayerWallet("Player");
     }
 
     public void CompleteQuest1()
