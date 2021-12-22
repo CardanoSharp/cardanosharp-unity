@@ -1,3 +1,9 @@
-# cardanosharp-unity
+# CardanoSharp Unity
 
-[Project Requirements (Google Docs)](https://docs.google.com/document/d/1tfBGndNCcEx6wYEndnDeImsnobjBjbI9c7SK2Lv93UY/edit?usp=sharing)
+> This is still a work in progress
+
+This is a sample project using CardanoSharp and Blockfrost. Cloning and running this unity project will help illustrate ONE way to leverage CardanoSharp.
+
+### Bringing CardanoSharp and Blockfrost into Your Unity Project
+
+All you will need to do is Copy `/Assets/Plugins/Cardano` into your project
