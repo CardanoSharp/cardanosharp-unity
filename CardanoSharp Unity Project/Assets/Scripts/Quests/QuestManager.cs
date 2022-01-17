@@ -25,9 +25,9 @@ public class QuestManager : Singleton<QuestManager>
     public void SetCurrentQuestInfo()
     {
         questText.text = quests[currentQuestIndex].questInfo;
-
-        if(quests[currentQuestIndex].OnStart != null)
-            quests[currentQuestIndex].OnStart.Raise();
+        quests[currentQuestIndex].OnStart();
+        /*if(quests[currentQuestIndex].OnStart != null)
+            quests[currentQuestIndex].OnStart.Raise();*/
 
         NewQuestAnimation();
     }
@@ -35,8 +35,9 @@ public class QuestManager : Singleton<QuestManager>
     [ContextMenu("Complete Quest")]
     public void CompleteCurrentQuest()
     {
-        if(quests[currentQuestIndex].OnComplete != null)
-            quests[currentQuestIndex].OnComplete.Raise();
+        quests[currentQuestIndex].OnComplete();
+        /*if(quests[currentQuestIndex].OnComplete != null)
+            quests[currentQuestIndex].OnComplete.Raise();*/
 
         if (currentQuestIndex < quests.Count - 1)
         {

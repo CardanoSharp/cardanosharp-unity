@@ -2,14 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
-public class QuestEvents : MonoBehaviour
+public class QuestEvents : Singleton<QuestEvents>
 {
     public CardanoManager CardanoManager;
 
     public void StartQuest1()
     {
         CardanoManager.CreatePlayerWallet("Player");
+        Debug.Log("Player wallet created");
     }
 
     public void CompleteQuest1()
@@ -19,6 +21,6 @@ public class QuestEvents : MonoBehaviour
 
     public void CompleteQuest3()
     {
-        CardanoManager.MintNFT("Sword");
+        //CardanoManager.MintNFT("Sword");
     }
 }
