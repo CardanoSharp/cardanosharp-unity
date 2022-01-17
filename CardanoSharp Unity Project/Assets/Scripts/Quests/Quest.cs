@@ -25,7 +25,8 @@ public class Quest : ScriptableObject
     public enum completeEvent
     {
         Nothing,
-        CompleteQuest1
+        CompleteQuest1,
+        CompleteQuest3 
     };
 
     public void OnStart() //Add case for every event.
@@ -50,6 +51,10 @@ public class Quest : ScriptableObject
             
             case completeEvent.CompleteQuest1:
                 QuestEvents.Instance.CompleteQuest1();
+                break;
+            
+            case completeEvent.CompleteQuest3:
+                QuestEvents.Instance.CompleteQuest3();
                 break;
         }
     }

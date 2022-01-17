@@ -21,6 +21,6 @@ public class QuestEvents : Singleton<QuestEvents>
 
     public void CompleteQuest3()
     {
-        //CardanoManager.MintNFT("Sword");
+        CardanoManager.MintNFT("Developer", "Player", "Sword", 1, new { Name = "Oathbringer", Stats = new { Atk = 100, Type = "2H Sword"}});
     }
 }

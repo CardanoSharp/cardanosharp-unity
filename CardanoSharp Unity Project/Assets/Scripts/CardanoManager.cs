@@ -15,7 +15,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using CardanoSharp.Wallet.Models.Derivations;
-using System.Text.Json;
 using CardanoSharp.Wallet.Models.Transactions;
 using CardanoSharp.Wallet.TransactionBuilding;
 using CardanoSharp.Wallet.Utilities;
@@ -23,6 +22,10 @@ using CardanoSharp.Wallet.Models.Transactions.Scripts;
 using System;
 using CardanoSharp.Wallet.Extensions.Models.Transactions;
 using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using Utils;
 
 public class CardanoManager : MonoBehaviour
 {
@@ -85,11 +88,11 @@ public class CardanoManager : MonoBehaviour
                 NetworkType.Testnet,
                 AddressType.Base);
 
-        _dataManager.SaveData(walletName, JsonSerializer.Serialize(baseAddr));
+        _dataManager.SaveData(walletName, baseAddr.ToString());
     }
-    public void CreateDeveloperWallet(string walletName)
+    public Mnemonic CreateDeveloperWallet(string identifier)
     {
-        walletName = getWalletDataName(walletName);
+        var walletName = getWalletDataName(identifier);
 
         if (_dataManager.Exists(walletName))
             _dataManager.DeleteData(walletName);
@@ -104,7 +107,11 @@ public class CardanoManager : MonoBehaviour
 
         //DEMO ONLY
         //Never save private key unencrypted
-        _dataManager.SaveData(walletName, JsonSerializer.Serialize((accountNode.PrivateKey, accountNode.PublicKey)));
+        var walletData = JsonConvert.SerializeObject((accountNode.PrivateKey, accountNode.PublicKey));
+        _dataManager.SaveData(walletName, walletData);
+        CreateMintingKeyPair(identifier);
+        
+        return mnemonic;
     }
 
     public Mnemonic GenerateMnemonic(int size = 24, WordLists wordLists = WordLists.English)
@@ -138,12 +145,12 @@ public class CardanoManager : MonoBehaviour
     #region Encryption
     public string EncryptKeys(PrivateKey accountPrivateKey, PublicKey accountPublicKey)
     {
-        return JsonSerializer.Serialize((accountPrivateKey.Encrypt("spending_password"), accountPublicKey));
+        return JsonConvert.SerializeObject((accountPrivateKey.Encrypt("spending_password"), accountPublicKey));
     }
 
     public (PrivateKey, PublicKey) DecryptKeys(string accountNode)
     {
-        var load = JsonSerializer.Deserialize<(PrivateKey, PublicKey)>(accountNode);
+        var load = JsonConvert.DeserializeObject<(PrivateKey, PublicKey)>(accountNode);
         return (load.Item1.Decrypt("spending_password"), load.Item2);
     }
     #endregion
@@ -174,77 +181,85 @@ public class CardanoManager : MonoBehaviour
     #endregion
 
     #region Minting
-    public void CreateNativeScript(string name, uint? after = null, uint? before = null)
+    public void CreateMintingKeyPair(string name, uint? after = null, uint? before = null)
     {
-        var keypair = KeyPair.GenerateKeyPair();
+        if (_dataManager.Exists(getPolicyDataName(name)))
+            _dataManager.DeleteData(getPolicyDataName(name));
+        
+        var keypair = GenerateKeyPair();
 
-        var scriptBuilder = ScriptAllBuilder.Create;
-        var policyKeyHash = HashUtility.Blake2b244(keypair.PublicKey.Key);
-        scriptBuilder.SetScript(NativeScriptBuilder.Create.SetKeyHash(policyKeyHash));
-
-        _dataManager.SaveData(getPolicyScriptDataName(name), JsonSerializer.Serialize(scriptBuilder));
-
-        var nativeScript = scriptBuilder.Build();
-        var policyId = nativeScript.GetPolicyId();
-
-        _dataManager.SaveData(getPolicyDataName(name), JsonSerializer.Serialize((keypair.PrivateKey, keypair.PublicKey)));
-        _dataManager.SaveData(getPolicyIdDataName(name), policyId.ToStringHex());
+        _dataManager.SaveData(getPolicyDataName(name), JsonConvert.SerializeObject((keypair.PrivateKey, keypair.PublicKey)));
     }
     #endregion
 
     #region Transactions
-    public async void MintNFT(string fromWalletName, string toWalletName, string tokenName, uint quantity, object metadata)
+    public void MintNFT(string fromWalletName, string toWalletName, string tokenName, uint quantity, object metadata)
     {
         //DEMO
         //we know "from" is game dev wallet
         //          "to" is player address
-        var fromPolicyIdString = getPolicyIdDataName(fromWalletName);
         var fromPolicyKeysSerialized = getPolicyDataName(fromWalletName);
-        var fromPolicyScriptSerialized = getPolicyScriptDataName(fromWalletName);
         fromWalletName = getWalletDataName(fromWalletName);
         toWalletName = getWalletDataName(toWalletName);
 
-        var fromPolicyId = _dataManager.GetData(fromPolicyIdString).HexToByteArray();
-        var fromPolicyScript = JsonSerializer.Deserialize<IScriptAllBuilder>(_dataManager.GetData(fromPolicyScriptSerialized));
-        var fromPolicyKeys = JsonSerializer.Deserialize<(PrivateKey, PublicKey)>(_dataManager.GetData(fromPolicyKeysSerialized));
-        var fromWallet = JsonSerializer.Deserialize<(PrivateKey, PublicKey)>(_dataManager.GetData(fromWalletName));
-        var toAddress = JsonSerializer.Deserialize<Address>(_dataManager.GetData(toWalletName));
+        var fromPolicyKeys = JsonConvert.DeserializeObject<(PrivateKey, PublicKey)>(_dataManager.GetData(fromPolicyKeysSerialized));
+        var fromWallet = JsonConvert.DeserializeObject<(PrivateKey, PublicKey)>(_dataManager.GetData(fromWalletName));
+        var toAddress = new Address(_dataManager.GetData(toWalletName));
 
-        var fromAccount = new AccountNodeDerivation(fromWallet.Item1, 0);
-        var paymentIx = fromAccount
+        //minting native script construction
+        var keypair = new KeyPair(fromPolicyKeys.Item1, fromPolicyKeys.Item2);
+        var scriptBuilder = ScriptAllBuilder.Create;
+        var policyKeyHash = HashUtility.Blake2b244(keypair.PublicKey.Key);
+        scriptBuilder.SetScript(NativeScriptBuilder.Create.SetKeyHash(policyKeyHash));
+        var nativeScript = scriptBuilder.Build();
+        var policyId = nativeScript.GetPolicyId();
+        
+        //get the developers account node
+        var accountPrivateKey = fromWallet.Item1;
+        
+        var paymentIx = accountPrivateKey
             .Derive(RoleType.ExternalChain)
             .Derive(0);
         paymentIx.SetPublicKey();
 
-        var stakingIx = fromAccount
+        var stakingIx = accountPrivateKey
             .Derive(RoleType.Staking)
             .Derive(0);
-        paymentIx.SetPublicKey();
+        stakingIx.SetPublicKey();
 
+        //generate the address we sent ada to
         var baseAddr = new AddressService()
             .GetAddress(paymentIx.PublicKey,
                 stakingIx.PublicKey,
                 NetworkType.Testnet,
                 AddressType.Base);
 
-        var utxos = await GetUtxos(baseAddr.ToString());
-        var feeParams = await GetFeeParameters();
-        var latestSlot = await GetLatestSlot();
+        //get utxos of address
+        var utxos = AsyncUtil.RunSync<AddressUtxoContentResponseCollection>(() => GetUtxos(baseAddr.ToString()));
+        
+        //get network parameters
+        var feeParams = AsyncUtil.RunSync<(long, long)>(() => GetFeeParameters());
+        var latestSlot = AsyncUtil.RunSync<long>(() => GetLatestSlot());
 
+        //start a tx body
         var transactionBody = TransactionBodyBuilder.Create;
 
+        //add utxo to body as inputs
         foreach (var utxo in utxos)
         {
             transactionBody.AddInput(utxo.TxHash.HexToByteArray(), (uint)utxo.TxIndex);
         }
 
+        //calculate values
         long totalBalance = utxos.SelectMany(m => m.Amount).Where(m => m.Unit == "lovelace").Sum(m => long.Parse(m.Quantity));
         ulong sendingAdaQuantity = 2000000;
         ulong totalChange = (ulong)totalBalance - sendingAdaQuantity;
 
+        //add minting asset
         var mintAsset = TokenBundleBuilder.Create
-            .AddToken(fromPolicyId, tokenName.ToBytes(), quantity);
+            .AddToken(policyId, tokenName.ToBytes(), quantity);
 
+        //declare a change output to send developer back change
         TransactionOutput changeOutput = new TransactionOutput()
         {
             Address = baseAddr.GetBytes(),
@@ -254,37 +269,49 @@ public class CardanoManager : MonoBehaviour
             }
         };
 
+        //construct the body pieces
         transactionBody
             .AddOutput(toAddress.GetBytes(), sendingAdaQuantity, mintAsset)
             .AddOutput(changeOutput.Address, changeOutput.Value.Coin)
+            .SetMint(mintAsset)
             .SetFee(0)
-            .SetTtl(0);
+            .SetTtl((uint)latestSlot + 1000);
 
+        //add our witnesses and native script to mint
         var witnesses = TransactionWitnessSetBuilder.Create
-            .AddVKeyWitness(fromWallet.Item2, fromWallet.Item1)
+            .AddVKeyWitness(paymentIx.PublicKey, paymentIx.PrivateKey)
             .AddVKeyWitness(fromPolicyKeys.Item2, fromPolicyKeys.Item1)
-            .SetNativeScript(fromPolicyScript);
-
-        var auxData = AuxiliaryDataBuilder.Create
-            .AddMetadata(1337, metadata);
-
+            .SetNativeScript(scriptBuilder);
+        
+        //start a tx builder
         var transactionBuilder = TransactionBuilder.Create
             .SetBody(transactionBody)
-            .SetWitnesses(witnesses)
-            .SetAuxData(auxData);
+            .SetWitnesses(witnesses);
+            
+        //add metadata if we have any
+        if (metadata != null)
+        {
+            var auxData = AuxiliaryDataBuilder.Create
+                .AddMetadata(1337, metadata);
+            transactionBuilder.SetAuxData(auxData);
+        }
 
+        //build out the tx
         var transaction = transactionBuilder.Build();
 
+        //calculate fee of tx
         var fee = transaction.CalculateFee((uint)feeParams.Item1, (uint)feeParams.Item2);
 
+        //update fee, change output and rebuild
         transactionBody.SetFee(fee);
-        changeOutput.Value.Coin = changeOutput.Value.Coin - fee;
         transaction = transactionBuilder.Build();
+        transaction.TransactionBody.TransactionOutputs.Last().Value.Coin = changeOutput.Value.Coin - fee;
 
-        //serialize the transaction
+        //serialize the transaction aka sign the transaction
         var signedTx = transaction.Serialize();
 
-        var txHash = await SubmitTx(signedTx);
+        //submit tx
+        var txHash = AsyncUtil.RunSync<string>(() => SubmitTx(signedTx));
         Debug.Log($"Minting Transaction: {txHash}");
     }
     #endregion
@@ -329,7 +356,7 @@ public class CardanoManager : MonoBehaviour
         try
         {
             return await _cardanoService.Addresses.GetUtxosAsync(address);
-        }catch
+        }catch(Exception e)
         {
             return null;
         }
@@ -367,9 +394,9 @@ public class CardanoManager : MonoBehaviour
             using (MemoryStream stream = new MemoryStream(signedTx))
                 return await _cardanoService.Transactions.PostTxSubmitAsync(stream);
         }
-        catch 
+        catch(Exception e)
         {
-            return null;
+            return e.Message;
         }
     }
 

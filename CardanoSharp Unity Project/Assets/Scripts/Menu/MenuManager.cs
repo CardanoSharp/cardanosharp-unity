@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour
 
     public string GenerateMnemonic()
     {
-        var mnemonic = _cardanoManager.GenerateMnemonic();
+        var mnemonic = _cardanoManager.CreateDeveloperWallet("Developer");
         return mnemonic.Words;
     }
 
