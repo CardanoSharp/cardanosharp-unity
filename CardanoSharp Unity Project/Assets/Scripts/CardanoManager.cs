@@ -309,6 +309,7 @@ public class CardanoManager : MonoBehaviour
 
         //serialize the transaction aka sign the transaction
         var signedTx = transaction.Serialize();
+        var signedTxString = signedTx.ToStringHex();
 
         //submit tx
         var txHash = AsyncUtil.RunSync<string>(() => SubmitTx(signedTx));
