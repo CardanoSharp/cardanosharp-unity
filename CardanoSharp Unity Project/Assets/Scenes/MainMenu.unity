@@ -2363,6 +2363,7 @@ GameObject:
   - component: {fileID: 834105314}
   - component: {fileID: 834105312}
   - component: {fileID: 834105311}
+  - component: {fileID: 834105315}
   m_Layer: 0
   m_Name: -- MANAGER --
   m_TagString: Untagged
@@ -2383,7 +2384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mnemonicWords: {fileID: 269961319}
-  mnemonicText: {fileID: 656579819}
   addressText: {fileID: 674035691}
   playButton: {fileID: 707060593}
 --- !u!114 &834105312
@@ -2422,6 +2422,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020655a535b13da439dc6b563fe77026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &834105315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834105310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b52f6c4cbd321446be2403b7653eaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &974300119

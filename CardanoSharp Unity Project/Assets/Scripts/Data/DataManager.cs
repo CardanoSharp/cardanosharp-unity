@@ -16,5 +16,13 @@ public class DataManager : MonoBehaviour
         return PlayerPrefs.GetString(name);
     }
 
-    public void DeleteData() { PlayerPrefs.DeleteAll(); }
+    public bool Exists(string name)
+    {
+        return PlayerPrefs.HasKey(name);
+    }
+
+    public void DeleteData(string name) 
+    { 
+        PlayerPrefs.DeleteKey(name); 
+    }
 }

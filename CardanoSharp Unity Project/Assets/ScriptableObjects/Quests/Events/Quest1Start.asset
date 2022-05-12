@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2065ce89e57a6b43818ef3a8f413bd7, type: 3}
-  m_Name: TestQuest 1
+  m_Script: {fileID: 11500000, guid: 5b7b581234606f94185678a0d6e55e39, type: 3}
+  m_Name: Quest1Start
   m_EditorClassIdentifier: 
-  id: 
-  questInfo: Second quest
-  OnStart: {fileID: 11400000, guid: f42b91b5206bc8d42ad7eac685fc1b56, type: 2}
-  OnComplete: {fileID: 11400000, guid: cc447db33075af3428239af9aa37c4b2, type: 2}
